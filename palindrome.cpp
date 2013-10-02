@@ -30,7 +30,7 @@ bool run()
 	cin >> option;
 	
 	cout << "Please input the string to check:" << endl;
-	cin >> input;
+	getline(cin, input);
 	
 	try
 	{
