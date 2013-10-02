@@ -29,6 +29,8 @@ bool run()
 	cout << "Would you like to filter out non-alphabetic characters? (Y/N)" << endl;
 	cin >> option;
 	
+	cin.ignore();
+	
 	cout << "Please input the string to check:" << endl;
 	getline(cin, input);
 	
