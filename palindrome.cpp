@@ -14,7 +14,7 @@ int main()
 	bool running = true;
 	while(running)
 	{
-		run();
+		running = run();
 	}
 	
 	return 0;
@@ -50,12 +50,17 @@ bool run()
 	
 	cout << "Would you like to try another? (Y/N)" << endl;
 	cin >> option;
-	return (toupper(option) == 'Y');
+	
+	if(toupper(option) == 'Y')
+		return true;
+	else
+		return false;
 }
 
 void validityCheck(string input)
 {
-	
+	if(input == "")
+		throw "Illegal Argument Exception";
 }
 
 bool isPalindrome(string input)
