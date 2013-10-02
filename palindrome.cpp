@@ -78,5 +78,16 @@ bool isPalindrome(string input, int first, int last)
 
 string filter(string input)
 {
+	int len = input.length();
+	string output = "";
+	for(int index = 0; index < len; index++)
+	{
+		if(isalpha(input[index]))
+		{
+			output += toupper(input[index]);
+		}
+	}
 	
+	return output;
 }
+
