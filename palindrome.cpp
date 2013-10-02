@@ -60,7 +60,20 @@ void validityCheck(string input)
 
 bool isPalindrome(string input)
 {
+	return isPalindrome(input, 0, input.length() - 1);
+}
 
+bool isPalindrome(string input, int first, int last)
+{
+	if(first >= last)
+	{
+		return true;
+	}
+	else if(input[first] == input[last])
+	{
+		return isPalindrome(input, first + 1, last - 1);
+	}
+	return false;
 }
 
 string filter(string input)
