@@ -4,10 +4,10 @@
 using namespace std;
 
 bool run();
-void validityCheck(string);
-bool isPalindrome(string); //initial setup function
-bool isPalindrome(string, int, int); //actual recursion
-string filter(string);
+void validityCheck(string&);
+bool isPalindrome(string&); //initial setup function
+bool isPalindrome(string&, int, int); //actual recursion
+string filter(string&);
 
 int main()
 {
@@ -59,18 +59,18 @@ bool run()
 		return false;
 }
 
-void validityCheck(string input)
+void validityCheck(string& input)
 {
 	if(input == "")
 		throw "Illegal Argument Exception";
 }
 
-bool isPalindrome(string input)
+bool isPalindrome(string& input)
 {
 	return isPalindrome(input, 0, input.length() - 1);
 }
 
-bool isPalindrome(string input, int first, int last)
+bool isPalindrome(string& input, int first, int last)
 {
 	if(first >= last)
 	{
@@ -83,7 +83,7 @@ bool isPalindrome(string input, int first, int last)
 	return false;
 }
 
-string filter(string input)
+string filter(string& input)
 {
 	int len = input.length();
 	string output = "";
